@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>BEST ACTRESS AWARD</title>
+    
+   
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            background-color: #38A3A5;
+            margin-top: 0;
+            margin: 0px;
+            width:100%;
+        }
+        h1{
+            color:#80ED99;
+        }
+        .nabar{
+            margin-top: 0;
+            margin: 0;
+            /*width:100%;*/
+            
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            display: inline-block;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .pictures{
+            display: inline-block;
+        
+        }
+        #name{
+            color:#22577A;
+        }
+        .hello{
+            color:#000957;
+        }
+        ul#horizontal-list li {
+		    display: inline-block;
+
+	    }
+        .navbarnav{
+            margin-top: 0;
+            display: inline-block;
+        }
+        #horizentallist{
+            margin-top: 0;
+            margin: 0;
+            width:100%;
+            margin-top: 0;
+            margin: 0;
+            /*width:100%;*/
+
+        }
+
+        .containertop{
+            margin-top: 0;
+            margin: 0;
+            width:100%;
+            margin-top: 0;
+            margin: 0;
+            background-color: #04293A;
+            display: inline-block;
+
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            }
+
+       
+
+        li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            }
+
+        #best{
+            padding-right:400px;
+        }
+        nav ul{
+            padding-left: 1000px;
+        }
+        p{
+            color:sandybrown;
+            font-size: 100px;
+        }
+      
+         
+      
+    </style>
+</head>
+<body>
+    <!-- SYSTEM -->
+    <nav class="containertop">
+        <a href="/" id="best"class="navbar-brand p-2" style="font-size: 25px;">BEST MOVIE 2021 ⭐ </a>
+        <ul id="horizontal-list" class="navbarnav">
+            <li id="vote"class="navitemmr2">
+                <a href="/" class="navlink">VOTE NOW</a>
+            </li>
+            <li id="show" class="navitem">
+                <a href="/showresults" class="nav-link">SHOW RESULTS</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="row text-center p-3">
+        {% if chains %}
+        {% for information in chains %}
+        <div class="col-md-4">
+            <div class="card p-3 mt-5 mx-auto"
+            style="border-radius: 25px; width: 30vw; height: 70vh; box-shadow: 1rem 1rem 1rem  #193498;
+        font-size: 1.4vw;">
+                <h2>Movie Name: {{ information.movie_name }}</h2>
+                <h4>Movie ID: {{ information.movieID }}</h4>
+                <h5>movie star: {{ information.movie_star }}</h5>
+                <h5>Genre: {{ information.genre }}</h5>
+                <h5>Age Restriction: {% if information.age_restricted == False %} None {% else %} Present {% endif %}
+                <h5>Total Votes: {{ information.votes_records}}
+                </h5>
+                <img class="pictures"src="https://www.miamarket.it/wp-content/uploads/2019/10/logo-best-movie.png" alt="jyjf" >
+
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No results to show yet</p>
+        {% endif %}
+    </div>
+</body>
