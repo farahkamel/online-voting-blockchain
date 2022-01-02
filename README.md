@@ -1,4 +1,12 @@
-# online-voting-blockchain
+# Online-voting-blockchain
+Introduction
+The aim for this system is for the user to vote for the best movie released in 2021 based on his preference and the three choices for the top 3 movies this year that are generated from a SQLite database. This voting system is a secure way of voting as its based on block chain technology in python. The block chain system converts the votes to blocks by mining them for a more reliable and secure transaction. The system relies on the growing list of chains(blocks) made with the Blockchain. These records are linked to one and another, main function is to store the votes in a mined way.
+
+
+![image](https://user-images.githubusercontent.com/74532447/147890233-518c3079-656f-4478-9052-d310785677e5.png)
+
+
+
 
 Instructions to use the system:
 This system was implemented using the following technologies:
